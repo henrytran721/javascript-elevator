@@ -1,0 +1,215 @@
+body {
+  background: -moz-linear-gradient(128deg, rgba(219,158,255,1) 0%, rgba(219,158,255,1) 35%, rgba(97,126,255,1) 84%, rgba(97,126,255,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(97,126,255,1)), color-stop(16%, rgba(97,126,255,1)), color-stop(65%, rgba(219,158,255,1)), color-stop(100%, rgba(219,158,255,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(128deg, rgba(219,158,255,1) 0%, rgba(219,158,255,1) 35%, rgba(97,126,255,1) 84%, rgba(97,126,255,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(128deg, rgba(219,158,255,1) 0%, rgba(219,158,255,1) 35%, rgba(97,126,255,1) 84%, rgba(97,126,255,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(128deg, rgba(219,158,255,1) 0%, rgba(219,158,255,1) 35%, rgba(97,126,255,1) 84%, rgba(97,126,255,1) 100%); /* ie10+ */
+background: linear-gradient(322deg, rgba(219,158,255,1) 0%, rgba(219,158,255,1) 35%, rgba(97,126,255,1) 84%, rgba(97,126,255,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#617EFF', endColorstr='#DB9EFF',GradientType=0 ); /* ie6-9 */
+background-size: contain;
+repeat: no-repeat;
+box-sizing: border-box;
+}
+.container {
+  display: grid;
+  grid-template-rows: repeat(7,100px);
+  grid-template-columns: repeat(3, 1fr);
+  max-height: 800px;
+  position: relative;
+}
+
+.elevator-doors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  grid-row: 6 / 7;
+  grid-column: 2 / 3;
+  position: relative;
+  position: absolute;
+  transition: bottom 1s;
+}
+
+.highlight {
+  color: white;
+  width: 75px;
+  height: 75px;
+  margin-right: 10%;
+  background: none;
+  border: none;
+  background-color: lime;
+  border-radius: 50%;
+  font-size: 2em;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid lime;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  transition: font-size 0.5s;
+}
+
+.floorText {
+  position: absolute;
+  bottom: -30px;
+  font-family: sans-serif;
+}
+
+.btn {
+  background: none;
+  border: none;
+  background-color: #c0c0c0;
+  color: white;
+  font-size: 1.5em;
+  border: 2px solid #000;
+}
+
+
+.numberBtn1 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 50px;
+  height: 40px;
+  background-color: #615c5a;
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  justify-self: center;
+  position: absolute;
+  top: -40px;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: lime;
+  font-family: sans-serif;
+}
+
+.numBtn1 {
+  width: 75px;
+  height: 75px;
+  margin-right: 10%;
+  background: none;
+  border: none;
+  color: white;
+  background-color: #c0c0c0;
+  border-radius: 50%;
+  font-size: 1.5em;
+  align-self: center;
+  border: 2px solid #000;
+}
+
+.numberBtn2 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: center;
+}
+
+.loneBtn {
+  width: 75px;
+  height: 75px;
+  margin-right: 10%;
+  background: none;
+  border: none;
+  color: white;
+  background-color: #c0c0c0;
+  border-radius: 50%;
+  font-size: 1.5em;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid #000;
+}
+
+.numBtn2 {
+  width: 75px;
+  height: 75px;
+  margin-right: 10%;
+  background: none;
+  border: none;
+  color: white;
+  background-color: #c0c0c0;
+  border-radius: 50%;
+  font-size: 1.5em;
+  align-self: center;
+  border: 2px solid #000;
+}
+
+.loneBtn {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.buttons {
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  justify-content: center;
+}
+
+#open {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+#close {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.rope {
+  background-color: #000;
+  width: 10px;
+  height: 500px;
+  grid-column: 2 / 3;
+  justify-self: center;
+  transition: 2s;
+}
+
+.elevatorContainer {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  z-index: 0;
+}
+
+.door-left {
+  background-color: gray;
+  width: 100px;
+  height: 200px;
+  margin-right: 2px;
+  margin-left: 0px;
+  transition: margin 0.5s;
+  z-index: 1000;
+  border: 6px solid #e0d8d4;
+}
+
+.door-left-open {
+  margin-right: 100px;
+}
+
+
+.door-right {
+  background-color: gray;
+  width: 100px;
+  height: 200px;
+  z-index: 1000;
+  border: 6px solid #e0d8d4;
+}
+
+.helpText {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+  text-align: center;
+  padding: 0 50px;
+  margin-right: 30px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
